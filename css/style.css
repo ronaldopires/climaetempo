@@ -1,0 +1,70 @@
+body {
+    font-family: 'Sriracha', cursive;
+    background-color: lightgray;
+    background-image: url(https://cdn.pixabay.com/photo/2020/02/02/11/53/sky-4812770_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    margin: 0;
+}
+#day, #div {
+    margin: 0 auto;
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+}
+#div {
+    background-color: lightcyan;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+}
+
+#cabecalho{
+    color: lightcoral;
+    line-height: 150px;
+    text-align: center;
+    background-color: blanchedalmond;
+    height: 150px;
+    margin: 0;
+}
+
+#cidade, #pesquisar{
+    width: 200px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid darkgreen;
+    color: darkgreen;
+}
+
+#pesquisar {
+    width: auto;
+    color: darkgreen;
+}
+#pesquisar:hover{
+    background-color: darkgreen;
+    color: #fff;
+    border: 1px solid black;
+}
+#cidade:hover{
+    border: 1px solid black;
+}
+#cidade::placeholder {
+    color: darkgreen;
+}
+
+
+#imagem {
+    float: left;
+}
+#week{
+    margin: 10px;
+}
+
+.weekresult{
+    background-color: lightgray;
+    width: 300px;
+    float: left;
+    
+}
