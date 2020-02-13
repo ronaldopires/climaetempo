@@ -5,15 +5,17 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;
-    box-sizing: border-box;
     margin: 0;
 }
-#day, #div {
+
+#day,
+#div {
     margin: 0 auto;
     width: 50%;
     padding: 5px;
     text-align: center;
 }
+
 #div {
     background-color: lightcyan;
     margin: 0 auto;
@@ -21,8 +23,8 @@ body {
     border-radius: 10px;
 }
 
-#cabecalho{
-    color: lightcoral;
+#cabecalho {
+    color: darkcyan;
     line-height: 150px;
     text-align: center;
     background-color: blanchedalmond;
@@ -30,7 +32,8 @@ body {
     margin: 0;
 }
 
-#cidade, #pesquisar{
+#cidade,
+#pesquisar {
     width: 200px;
     padding: 8px;
     border-radius: 5px;
@@ -42,29 +45,22 @@ body {
     width: auto;
     color: darkgreen;
 }
-#pesquisar:hover{
-    background-color: darkgreen;
-    color: #fff;
-    border: 1px solid black;
-}
-#cidade:hover{
-    border: 1px solid black;
-}
-#cidade::placeholder {
-    color: darkgreen;
-}
-
 
 #imagem {
     float: left;
 }
-#week{
-    margin: 10px;
+
+table {
+    width: 100%;
 }
 
-.weekresult{
-    background-color: lightgray;
-    width: 300px;
-    float: left;
-    
+footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    background-color: antiquewhite;
+    clear: both;
 }
