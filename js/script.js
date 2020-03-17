@@ -22,18 +22,20 @@ window.addEventListener('load', function() {
             let temperatura = data.results.temp;
             let date = data.results.date;
             let time = data.results.time;
+            let cidade = data.results.city;
             let description = data.results.description;
             let img = data.results.img_id;
             let humidity = data.results.humidity;
 
+            console.log(cidade);
 
-
-            document.getElementById('imagem').innerHTML += `<img src='https://assets.hgbrasil.com/weather/images/${img}.png'><br>`;
-            document.getElementById('temperatura').innerText = `Temperatura ${temperatura} °C`;
-            document.getElementById('date').innerText = `Data ${date}`;
+            document.getElementById('imagem').innerHTML = `<img class="card-img img-fluid w-100 d-block" src='https://assets.hgbrasil.com/weather/images/${img}.png'><br>`;
+            document.getElementById('temperatura').innerText = temperatura + '° ';
+            document.getElementById('city').innerText = cidade;
+            document.getElementById('date').innerText = `Data ${date} `;
             document.getElementById('time').innerText = `Hora ${time}`;
-            document.getElementById('description').innerText = `Descrição ${description}`;
-            document.getElementById('humidade').innerText = `Humidade ${humidity}`;
+            document.getElementById('description').innerText = ` ${description} `;
+            document.getElementById('humidade').innerText = ` Humidade ${humidity} `;
 
 
         }
@@ -52,20 +54,10 @@ window.addEventListener('load', function() {
                 let description = result.description;
                 let resultWeek = document.getElementById('week');
 
-                resultWeek.innerHTML += "<tr>";
-                resultWeek.innerHTML += "<th>Data</th>";
-                resultWeek.innerHTML += "<th>dia da Semana</th>";
-                resultWeek.innerHTML += "<th>Máxima</th>";
-                resultWeek.innerHTML += "<th>Mínima</th>";
-                resultWeek.innerHTML += "<th>Descrição</th>";
-                resultWeek.innerHTML += "</tr>";
-                resultWeek.innerHTML += "<tr>";
-                resultWeek.innerHTML += `<td>${date}</td>`;
-                resultWeek.innerHTML += `<td>${weekday}</td>`;
-                resultWeek.innerHTML += `<td>${max} °C </td>`;
-                resultWeek.innerHTML += `<td>${min} °C</td>`;
-                resultWeek.innerHTML += `<td>${description}</td>`;
-                resultWeek.innerHTML += "<tr>";
+                resultWeek.innerHTML +=
+                    '<div class="col-3 p-0"><div class="card bg-light mb-3"><div class="card-header text-center">' + date + ' - ' + weekday +
+                    '</div><div class="card-body"><b class="card-title">' + description +
+                    '</b><p class="card-text">Mínima ' + min + 'º - Máxima ' + max + 'º </p></div></div>';
 
             }
 

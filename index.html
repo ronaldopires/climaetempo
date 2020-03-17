@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
@@ -11,40 +13,63 @@
 </head>
 
 <body>
-    <div id="container">
-
-        <header>
-            <h1 id="cabecalho">Consulta Clima e Tempo</h1>
-        </header>
-        <div>
-            <section id="day">
-                <form>
-                    <input type="text" name="cidade" id="cidade" placeholder="Digite o local para pesquisar">
-                    <input type="button" value="Pesquisar" name="pesquisar" id="pesquisar"></input>
-                </form>
-            </section>
-            <div id="div">
-                <p id="imagem"></p>
-                <p id="temperatura"></p>
-                <p id="date"></p>
-                <p id="time"></p>
-                <p id="description"></p>
-                <p id="humidade"></p>
-
+    <div class="container bg-light">
+        <div class="row no-gutters">
+            <div class="col">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">Clima e Tempo</h1>
+                        <p class="lead">Consulte o clima através da API HG Brasil.
+                        </p>
+                    </div>
+                </div>
             </div>
-
-            <table id="week">
-            </table>
         </div>
-        <footer>
-            Desenvolvido por Ronaldo Carvalho - 2019 &copy;
-        </footer>
+        <div class="row no-gutters">
+            <div class="col">
+                <p>Pesquise o clima atual</p>
+                <form class="form-inline">
+                    <div class="form-group mr-sm-3 mb-2">
+                        <label for="cidade" class="sr-only">Local</label>
+                        <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Cidade">
+                    </div>
+                    <button type="button" id="pesquisar" class="btn btn-primary mb-2">Pesquisar</button>
+                </form>
+            </div>
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 border">
+                            <div id="imagem"></div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><span id="city"> </span><span id="temperatura"> </span></h5>
+                                <p class="card-text"><b id="description"></b><span id="humidade"></span></p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text"><small class="text-muted"> <span id="date"></span><span
+                                            id="time"></span></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col">
+                <h4 class="text-center mb-3">Temperatura da Semana</h4>
+                <div class="card-deck" id="week"></div>
+            </div>
+        </div>
     </div>
-
 
     <!--Script-->
     <script src="js/script.js" type="text/javascript"></script>
-
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>
